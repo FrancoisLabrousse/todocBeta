@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/img_project"
+        android:layout_width="@dimen/img_project_size"
+        android:layout_height="@dimen/img_project_size"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/item_task_margin_start"
+        android:layout_marginTop="@dimen/item_task_margin_top"
+        android:layout_marginEnd="@dimen/item_task_margin_end"
+        android:layout_marginBottom="@dimen/item_task_margin_bottom"
+        android:src="@drawable/bkg_oval"
+        tools:tint="@sample/tasks.json/data/backgroundTint" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/img_delete"
+        android:layout_width="@dimen/img_project_size"
+        android:layout_height="@dimen/img_project_size"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/item_task_margin_start"
+        android:layout_marginTop="@dimen/item_task_margin_top"
+        android:layout_marginEnd="@dimen/item_task_margin_end"
+        android:layout_marginBottom="@dimen/item_task_margin_bottom"
+        android:src="@drawable/ic_delete"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        app:tint="#DE000000" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/img_delete"
+        android:layout_toEndOf="@+id/img_project"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lbl_task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_task_margin_top"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size"
+            tools:text="@sample/tasks.json/data/taskName" />
+
+        <TextView
+            android:id="@+id/lbl_project_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_task_margin_bottom"
+            android:ellipsize="end"
+            android:textSize="@dimen/text_size"
+            android:lines="1"
+            tools:text="@sample/tasks.json/data/projectName" />
+    </LinearLayout>
+</RelativeLayout>
